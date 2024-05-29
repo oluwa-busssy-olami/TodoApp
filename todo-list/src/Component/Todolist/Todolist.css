@@ -1,0 +1,99 @@
+.container {
+    background-color: #2d2e40;
+    max-width: 600px;
+    padding: 20px;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    min-width: 40 0px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.newtask {
+    position: relative;
+    display: block;
+}
+
+.newtask input {
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #3a3b52;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 14px;
+}
+
+.add {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    right: 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    font-size: 16;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    background-color: #4185f3;
+    color: #fff;
+    /* transform: translate(-50%, -10%); */
+}
+
+.todo-task {
+    margin-top: 20px;
+}
+
+.todo-task h3 {
+    color: #9999b0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+span {
+    padding-left: 20px;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: #3a3b52;
+    border-radius: 10px;
+    padding: 12px;
+    color: #f2f2f2;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.del {
+    width: 18px;
+    height: 18px;
+}
+
+.del-btn {
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@media (max-width: 460px) {
+    .container {
+        max-width: 600px;
+    }
+}
