@@ -1,16 +1,25 @@
 .container {
     background-color: #2d2e40;
     max-width: 600px;
-    padding: 20px;
+    padding: 40px 30px;
     width: 40%;
     top: 50%;
     left: 50%;
-    border-radius: 10px;
-    min-width: 40 0px;
+    border-radius: 15px;
+    min-width: 375px;
     position: absolute;
     min-height: 100px;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: -5px 6px 16px 8px rgba(0, 0, 0, 0.15);
+}
+
+.newtask h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #9999b0;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 .newtask {
@@ -24,19 +33,19 @@
     border-radius: 20px;
     background-color: #3a3b52;
     border: none;
-    color: #fff;
-    font-size: 15px;
+    color: #f2f2f2;
+    font-size: 13px;
     outline: none;
 }
 
 input::placeholder {
-    color: #fff;
+    color: #f2f2f2;
     font-size: 14px;
 }
 
 .add {
     position: absolute;
-    top: 15px;
+    top: 65px;
     bottom: 0;
     right: 20px;
     padding: 0 10px;
@@ -57,9 +66,12 @@ input::placeholder {
 
 .todo-task h3 {
     color: #9999b0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     text-align: center;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    text-decoration: underline;
 }
 
 span {
@@ -80,6 +92,14 @@ span {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.toggle {
+    padding: 10px;
+    background-color: green;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
 .del {
     width: 18px;
     height: 18px;
@@ -95,5 +115,6 @@ span {
 @media (max-width: 460px) {
     .container {
         max-width: 600px;
+        padding: 30px 15px;
     }
 }
