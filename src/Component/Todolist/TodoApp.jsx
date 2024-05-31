@@ -13,7 +13,7 @@ const TodoApp = () => {
     const taskObject = {
       id: nanoid(),
       name: task,
-      isToggled: false, // Add isToggled property
+      isToggled: false,
     };
     const updatedTasks = [taskObject, ...tasks];
     setTasks(updatedTasks);
