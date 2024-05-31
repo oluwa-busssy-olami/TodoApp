@@ -5,24 +5,42 @@ import TodoList from "./TodoList";
 import { nanoid } from "nanoid";
 
 const TodoApp = () => {
-  const initilTasks = [];
+  const initialTasks = [];
 
-  const [tasks, setTasks] = useState(initilTasks);
+  const [tasks, setTasks] = useState(initialTasks);
+
   const addNewTask = (task) => {
-    // console.log(`In the TodoApp Th new task is ${task}`);
     const taskObject = {
       id: nanoid(),
       name: task,
+      isToggled: false, // Add isToggled property
     };
     const updatedTasks = [taskObject, ...tasks];
-    // console.log(...tasks);
+    setTasks(updatedTasks);
+  };
+
+  const deleteTask = (taskId) => {
+    console.log(`${taskId} item deleted`);
+    const updatedTasks = tasks.filter((item) => item.id !== taskId);
+    setTasks(updatedTasks);
+  };
+
+  const toggleTask = (toggleId) => {
+    console.log(`${toggleId} item toggled`);
+    const updatedTasks = tasks.map((item) =>
+      item.id === toggleId ? { ...item, isToggled: !item.isToggled } : item
+    );
     setTasks(updatedTasks);
   };
 
   return (
     <div className="container">
       <FormSection handleClick={addNewTask} />
-      <TodoList tasks={tasks} />
+      <TodoList
+        tasks={tasks}
+        onDeleteClick={deleteTask}
+        onToggleClick={toggleTask}
+      />
     </div>
   );
 };

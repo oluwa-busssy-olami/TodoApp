@@ -5,9 +5,6 @@ import remove_icon from "../../assests/delete.jpg";
 // Data Sourc
 
 const TodoList = (props) => {
-  const handleDelClick = () => {
-    console.log("delete");
-  };
   const [toggleColour, setToggleColor] = useState("white");
   const handleToggle = () => {
     setToggleColor(toggleColour);
@@ -18,17 +15,16 @@ const TodoList = (props) => {
       <div key={task.id} className="task">
         <div className="check-box">
           <button
-            className="toggle"
-            onClick={handleToggle}
-            style={{ backgroundColor: toggleColour }}>
-            {/* <img src={green_tick} alt="" className="check-click" /> */}
-          </button>
+            className={task.isToggled ? "toggle" : "untoggled"}
+            onClick={() => props.onToggleClick(task.id)}></button>
           <span className="taskName">{task.name}</span>
         </div>
 
         <div className="btn-task">
           {/* <button className="edit-btn">edit</button> */}
-          <button className="del-btn" onClick={handleDelClick}>
+          <button
+            className="del-btn"
+            onClick={() => props.onDeleteClick(task.id)}>
             <img src={remove_icon} alt="" className="del" />
           </button>
         </div>
