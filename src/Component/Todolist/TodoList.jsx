@@ -5,11 +5,6 @@ import remove_icon from "../../assests/delete.jpg";
 // Data Sourc
 
 const TodoList = (props) => {
-  const [toggleColour, setToggleColor] = useState("white");
-  const handleToggle = () => {
-    setToggleColor(toggleColour);
-    console.log("toggle");
-  };
   const addTask = props.tasks.map((task, index) => {
     return (
       <div key={task.id} className="task">
