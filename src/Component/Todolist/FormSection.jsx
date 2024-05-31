@@ -8,9 +8,10 @@ const FormSection = (props) => {
     setNewTask(taskTodo);
     // console.log(taskTodo);
   };
-  const handleClick = () => {
+  const handleClick = (event) => {
     if (newTask.trim() === "") {
-      console.log("emter a valid todo-task");
+      console.log("enter a valid todo-task");
+      console.log(event);
     } else {
       props.handleClick(newTask);
       console.log(`The new task is ${newTask}`);

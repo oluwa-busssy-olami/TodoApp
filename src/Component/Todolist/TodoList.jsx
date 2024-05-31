@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-// import green_tick from "../../assests/green-tick.jpg";
 import remove_icon from "../../assests/delete.jpg";
 
 // Data Sourc
 
 const TodoList = (props) => {
+  const formatDate = (date) => {
+    return date.toLocaleDateString();
+  };
   const addTask = props.tasks.map((task, index) => {
     return (
       <div key={task.id} className="task">
@@ -13,6 +14,7 @@ const TodoList = (props) => {
             className={task.isToggled ? "toggle" : "untoggled"}
             onClick={() => props.onToggleClick(task.id)}></button>
           <span className="taskName">{task.name}</span>
+          <p className="date">{formatDate(new Date())}</p>
         </div>
 
         <div className="btn-task">
